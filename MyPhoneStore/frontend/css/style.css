@@ -172,13 +172,7 @@ nav ul li:nth-child(3), nav ul li:nth-child(4), nav ul li:nth-child(5), nav ul l
     cursor: pointer;
 }
 
-/*---------------chatbot------------*/
-.chatbot {
-    width: 10%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+/* Chatbot styles removed */
 
 /* ---------------product--------------- */
 .product-list {
