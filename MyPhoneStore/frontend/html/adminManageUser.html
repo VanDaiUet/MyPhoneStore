@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/adminstyle.css">
+    <title>Quản lý người dùng</title>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-admin-container">
+            <ul>
+                <li><a href="adminManageProduct.html"><img src="../images/quan_li_san_pham.png" alt="Quản lý sản phẩm">Quản lý sản phẩm</a></li>
+                <li><a href="adminOrder.html"><img src="../images/quan_ly_don_hang.png" alt="Quản lý đơn hàng">Quản lý đơn hàng</a></li>
+                <li><a href="adminManageUser.html"><img src="../images/quan_ly_user.png" alt="Quản lý khách hàng">Quản lý khách hàng</a></li>
+                <li><a href="./login.html"><img src="../images/logout.png" alt="logout">Đăng xuất</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="title-container">
+        <h1>QUẢN LÝ NGƯỜI DÙNG</h1>
+    </div>
+    <div class="table-management">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID User</th>
+                    <th>Username</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+
+            <tbody id="user-table-body">
+                <!-- Dữ liệu sản phẩm sẽ được chèn ở đây -->
+
+            </tbody>
+        </table>
+    </div>
+    <script src="../js/table-user.js"></script>
+
+</body>
+
+</html>

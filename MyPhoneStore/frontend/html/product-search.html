@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>phoneVip</title>
+</head>
+<body>
+    <div class="home">
+        <header>
+            <img src="../images/banner.png" alt="banner">
+        </header> 
+    
+        <nav>
+            <div class="nav-container">
+                <ul>
+                    <li><a href="index.html"><img src="../images/home.png" alt="home", width="50">Trang chủ</a></li>
+                    <li><input type="text" id="search-input" placeholder="Bạn muốn tìm"><img src="../images/search.png" alt="search", width="15" id="search-button" onclick="searchProducts()"></li>
+                    <li><a href="cart.html"><img src="../images/store.png" alt="store", width="50">Giỏ hàng</a></li>
+                    <li><a href="orders.html"><img src="../images/order.png" alt="order", width="50">Đơn hàng</a></li>
+                    <li><a href="account.html"><img src="../images/user.png" alt="user", width="50">Tài khoản</a></li>
+                    <li><a href="./login.html"><img src="../images/logout.png" alt="logout", width="50">Login/Logout</a></li>
+                </ul>
+            </div>
+        </nav>
+    
+        <div class="ads">
+            <img src="../images/quang_cao_ngang.png" alt="ads">
+        </div> 
+        
+        <div class="filter-button">
+            <ul>
+                <li><button onclick="filterProducts('price,desc')">Giá giảm dần</button></li>
+                <li><button onclick="filterProducts('price,asc')">Giá tăng dần</button></li>
+                <li><button onclick="filterProducts('rating,desc')">Rating</button></li>
+            </ul>
+        </div>
+    
+        <div class="product-list" id="product-list"></div>
+
+        <div class="pagination">
+            <button id="prev-button" onclick="changePage(-1)">Trang trước đó</button>
+            <button id="next-button" onclick="changePage(1)">Trang tiếp theo</button>
+        </div>
+    </div>
+
+    <footer>
+        <img src="../images/footer.png" alt="footer">
+    </footer>
+    
+    <script src="../js/product-search.js"></script>
+
+    <script>
+        window.onload = function() {
+            const params = new URLSearchParams(window.location.search);
+            const key = params.get('key') || '';
+            const searchInput = document.getElementById('search-input');
+            if (searchInput) {
+                searchInput.value = key;
+                searchInput.focus();
+            }
+            searchProducts();
+        };
+    </script>
+
+    <script type="text/javascript">
+        (function(d, t) {
+            var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+            v.onload = function() {
+              window.voiceflow.chat.load({
+                verify: { projectID: '67f92cf45c02abbb3caec971' },
+                url: 'https://general-runtime.voiceflow.com',
+                versionID: 'production',
+                voice: {
+                  url: "https://runtime-api.voiceflow.com"
+                }
+              });
+            }
+            v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+        })(document, 'script');
+      </script>
+</body>
+</html>

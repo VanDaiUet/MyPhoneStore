@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/adminstyle.css">
+    <title>Quản lý sản phẩm</title>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-admin-container">
+            <ul>
+                <li><a href="adminManageProduct.html"><img src="../images/quan_li_san_pham.png" alt="Quản lý sản phẩm">Quản lý sản phẩm</a></li>
+                <li><a href="adminOrder.html"><img src="../images/quan_ly_don_hang.png" alt="Quản lý đơn hàng">Quản lý đơn hàng</a></li>
+                <li><a href="adminManageUser.html"><img src="../images/quan_ly_user.png" alt="Quản lý khách hàng">Quản lý khách hàng</a></li>
+                <li><a href="./login.html"><img src="../images/logout.png" alt="logout">Đăng xuất</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="title-container">
+        <h1>QUẢN LÝ SẢN PHẨM</h1>
+    </div>
+    <a href="adminAddProduct.html" class="add-product-button">
+        <img src="../images/them_san_pham.png" alt="Thêm sản phẩm" width="50">Thêm sản phẩm
+    </a>
+
+    <div class="table-management">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Tên điện thoại</th>
+                    <th>Tồn kho</th>
+                    <th>Màu sắc</th>
+                    <th>RAM</th>
+                    <th>Memory</th>
+                    <th>Hãng điện thoại</th>
+                    <th>Giá tiền</th>
+                    <th>Ảnh</th>
+                </tr>
+            </thead>
+
+            <tbody id="product-table-body">
+                <!-- Dữ liệu sản phẩm sẽ được chèn ở đây -->
+
+            </tbody>
+        </table>
+        <div id="pagination" style="margin-top: 20px; text-align: center;"></div>
+
+    </div>
+    <script src="../js/table-product.js"></script>
+
+</body>
+
+</html>

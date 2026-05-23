@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chỉnh sửa sản phẩm</title>
+    <link rel="stylesheet" href="../css/adminstyle.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-admin-container">
+            <ul>
+                <li><a href="adminManageProduct.html"><img src="../images/quan_li_san_pham.png" alt="Quản lý sản phẩm">Quản lý sản phẩm</a></li>
+                <li><a href="adminOrder.html"><img src="../images/quan_ly_don_hang.png" alt="Quản lý đơn hàng">Quản lý đơn hàng</a></li>
+                <li><a href="adminManageUser.html"><img src="../images/quan_ly_user.png" alt="Quản lý khách hàng">Quản lý khách hàng</a></li>
+                <li><a href="./login.html"><img src="../images/logout.png" alt="logout">Đăng xuất</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="title-container">
+        <h1>CHỈNH SỬA SẢN PHẨM</h1>
+    </div>
+
+    <div class="add-product-form">
+        <form id="editProductForm" enctype="multipart/form-data">
+            <!-- Tên sản phẩm -->
+            <div class="form-group">
+                <label for="productName">Tên sản phẩm</label>
+                <input type="text" id="productName" name="name" required placeholder="Nhập tên sản phẩm">
+            </div>
+
+            <!-- Giá sản phẩm -->
+            <div class="form-group">
+                <label for="productPrice">Giá sản phẩm</label>
+                <input type="number" id="productPrice" name="price" step="0.01" required placeholder="Nhập giá sản phẩm">
+            </div>
+
+            <!-- Màu sắc -->
+            <div class="form-group">
+                <label for="productColor">Màu sắc</label>
+                <input type="text" id="productColor" name="color" required placeholder="Nhập màu sắc sản phẩm">
+            </div>
+
+            <!-- RAM -->
+            <div class="form-group">
+                <label for="productRam">RAM (GB)</label>
+                <input type="number" id="productRAM" name="ram" required placeholder="Nhập RAM">
+            </div>
+
+            <!-- Dung lượng bộ nhớ -->
+            <div class="form-group">
+                <label for="productMemory">Storage (GB)</label>
+                <input type="number" id="productStorage" name="storage" required placeholder="Nhập dung lượng bộ nhớ">
+            </div>
+
+            <!-- Hãng điện thoại -->
+            <div class="form-group">
+                <label for="productBrand">Hãng điện thoại</label>
+                <input type="text" id="productBrand" name="manufacturer" required placeholder="Nhập hãng điện thoại">
+            </div>
+
+            <!-- Số lượng sản phẩm (Cập nhật mục này) -->
+            <div class="form-group">
+                <label for="productStock">Số lượng sản phẩm</label>
+                <input type="number" id="productStock" name="stock" required placeholder="Nhập số lượng sản phẩm">
+            </div>
+
+            <!-- URL ảnh sản phẩm -->
+            <div class="form-group">
+                <label for="productImageUrl">Đường dẫn ảnh (URL)</label>
+                <input type="text" id="productImageUrl" name="imageUrl" placeholder="Nhập URL ảnh sản phẩm">
+            </div>
+
+            <!-- Thông tin sản phẩm -->
+            <div class="form-group">
+                <label for="description">Thông tin sản phẩm</label>
+                <textarea id="description" name="description" rows="5" placeholder="Nhập mô tả chi tiết về sản phẩm..."></textarea>
+            </div>
+
+
+            <div class="form-actions">
+                <button type="submit">Cập nhật sản phẩm</button>
+                <button type="button" onclick="window.location.href='adminManageProduct.html'">Hủy, trở về trang quản lý sản phẩm</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="../js/edit-product.js"></script>
+</body>
+</html>

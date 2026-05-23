@@ -1,0 +1,33 @@
+.DS_Store
+# Maven / Java
+target/
+**/target/
+*.class
+
+# IDEs and editors
+*.iml
+.idea/
+.vscode/
+.classpath
+.project
+
+# Node
+node_modules/
+frontend/node_modules/
+json-server/node_modules/
+
+# Build outputs
+dist/
+build/
+
+# Logs
+*.log
+
+# OS
+Thumbs.db
+
+# Environment
+.env
+
+# Secrets (consider removing tracked secrets from git history separately)
+secrets.properties

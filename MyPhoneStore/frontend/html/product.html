@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Thông tin sản phẩm</title>
+</head>
+<body>
+    <header>
+        <img src="../images/banner.png" alt="banner">
+    </header>
+
+    <nav>
+        <div class="nav-container">
+            <ul>
+                <li><a href="index.html"><img src="../images/home.png" alt="home", width="50">Trang chủ</a></li>
+                <li><input type="text" id="search-input" placeholder="Bạn muốn tìm"><img src="../images/search.png" alt="search", width="15" id="search-button"></li>
+                <li><a href="cart.html"><img src="../images/store.png" alt="store", width="50">Giỏ hàng</a></li>
+                <li><a href="orders.html"><img src="../images/order.png" alt="order", width="50">Đơn hàng</a></li>
+                <li><a href="account.html"><img src="../images/user.png" alt="user", width="50">Tài khoản</a></li>
+                <li><a href="./login.html"><img src="../images/logout.png" alt="logout", width="50">Login/Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="information">
+        <div class="product-title"></div>
+
+        <div class="product-details">
+            <div class="left">
+                <div class="product-image">
+                    <img src="../images/dienthoai.png" alt="dien thoai">
+                </div>
+            </div>
+            
+            <div class="right">
+                <div class="product-info">
+                    <p></p>  
+                    <div class="price" id="product-price"></div>
+                    <div class="quantity">
+                        <button onclick="updateQuantity(-1)">-</button>
+                        <span id="quantity">1</span>
+                        <button onclick="updateQuantity(1)">+</button>
+                    </div>
+                    <div class="buy-button">
+                        <button onclick="addToCart()">Thêm vào giỏ hàng</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-description">
+            <p>Thông tin sản phẩm:</p>
+        </div>
+    </div>
+
+    <div class="product-reviews">
+        <br>
+        <h3 style="margin-left: 150px;">Đánh giá của người dùng</h3>
+        <br>
+        <div id="reviews-container">
+            <!-- Các đánh giá sẽ được hiển thị tại đây -->
+        </div>
+        <br>
+    </div>
+
+    <footer>
+        <img src="../images/footer.png" alt="footer">
+    </footer>
+
+    <script src="../js/product.js"></script>
+
+    <script>
+        document.getElementById('search-button').addEventListener('click', function () {
+            const searchValue = document.getElementById('search-input').value.trim();
+            // Chuyển sang product-search.html và truyền giá trị tìm kiếm qua query string
+            window.location.href = `product-search.html?key=${encodeURIComponent(searchValue)}`;
+        });
+    </script>
+
+    <script type="text/javascript">
+        (function(d, t) {
+            var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+            v.onload = function() {
+              window.voiceflow.chat.load({
+                verify: { projectID: '67f92cf45c02abbb3caec971' },
+                url: 'https://general-runtime.voiceflow.com',
+                versionID: 'production',
+                voice: {
+                  url: "https://runtime-api.voiceflow.com"
+                }
+              });
+            }
+            v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+        })(document, 'script');
+      </script>
+</body>
+</html>

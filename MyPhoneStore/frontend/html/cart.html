@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Giỏ hàng</title>
+</head>
+<body>
+    <header>
+        <img src="../images/banner.png" alt="banner">
+    </header>
+
+    <nav>
+        <div class="nav-container">
+            <ul>
+                <li><a href="index.html"><img src="../images/home.png" alt="home", width="50">Trang chủ</a></li>
+                <li><input type="text" id="search-input" placeholder="Bạn muốn tìm"><img src="../images/search.png" alt="search", width="15" id="search-button"></li>
+                <li><a href="cart.html"><img src="../images/store.png" alt="store", width="50">Giỏ hàng</a></li>
+                <li><a href="orders.html"><img src="../images/order.png" alt="order", width="50">Đơn hàng</a></li>
+                <li><a href="account.html"><img src="../images/user.png" alt="user", width="50">Tài khoản</a></li>
+                <li><a href="./login.html"><img src="../images/logout.png" alt="logout", width="50">Login/Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="cart">
+        <div class="cart-title">Giỏ hàng của tôi:</div>
+
+        <div class="cart-items" id="cart-items"></div>
+
+        <div class="cart-action">
+            <button onclick="selectAll()">Chọn tất cả</button>
+            <button onclick="deleteSelected()">Xóa sản phẩm được chọn</button>
+            <p id="total-quantity">Số lượng sản phẩm: </p>
+            <div class="buy-now">
+                <button><a href="payment.html">Mua ngay</a></button>
+                <p id="total-price">Tổng giá trị đơn hàng: </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/cart.js"></script>
+
+    <script>
+        document.getElementById('search-button').addEventListener('click', function () {
+            const searchValue = document.getElementById('search-input').value.trim();
+            // Chuyển sang product-search.html và truyền giá trị tìm kiếm qua query string
+            window.location.href = `product-search.html?key=${encodeURIComponent(searchValue)}`;
+        });
+    </script>
+</body>
+</html>

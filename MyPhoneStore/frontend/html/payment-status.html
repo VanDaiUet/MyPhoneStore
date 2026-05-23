@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Trạng thái thanh toán</title>
+  </head>
+  <body>
+    <header>
+        <img src="../images/banner.png" alt="banner" />
+      </header>
+  
+      <nav>
+        <div class="nav-container">
+            <ul>
+                <li><a href="index.html"><img src="../images/home.png" alt="home", width="50">Trang chủ</a></li>
+                <li><input type="text" id="search-input" placeholder="Bạn muốn tìm"><img src="../images/search.png" alt="search", width="15" id="search-button"></li>
+                <li><a href="cart.html"><img src="../images/store.png" alt="store", width="50">Giỏ hàng</a></li>
+                <li><a href="orders.html"><img src="../images/order.png" alt="order", width="50">Đơn hàng</a></li>
+                <li><a href="account.html"><img src="../images/user.png" alt="user", width="50">Tài khoản</a></li>
+                <li><a href="./login.html"><img src="../images/logout.png" alt="logout", width="50">Đăng xuất</a></li>
+            </ul>
+        </div>
+    </nav>
+
+      <div class="payment-status">
+        <div class="status-image">
+          <img id="status-image" src="" alt="">
+        </div>
+    
+          <div class="status">
+            <p><span id="vnp-amount"></span></p>
+            <p><span id="vnp-paydate"></span></p>
+            <p><span id="vnp-txnref"></span></p>
+            <p><span id="vnp-responsecode"></span></p>
+          </div>
+    
+          <div class="return-button">
+            <button><a href="index.html">Về trang chủ</a></button>
+          </div>
+      </div>
+
+      <script src="../js/payment-status.js"></script>
+      <script>
+        document.getElementById('search-button').addEventListener('click', function () {
+            const searchValue = document.getElementById('search-input').value.trim();
+            // Chuyển sang product-search.html và truyền giá trị tìm kiếm qua query string
+            window.location.href = `product-search.html?key=${encodeURIComponent(searchValue)}`;
+        });
+    </script>
+  </body>
+</html>

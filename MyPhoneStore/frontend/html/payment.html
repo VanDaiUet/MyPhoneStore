@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Thanh toán</title>
+  </head>
+  <body>
+    <header>
+      <img src="../images/banner.png" alt="banner" />
+    </header>
+
+    <nav>
+      <div class="nav-container">
+          <ul>
+              <li><a href="index.html"><img src="../images/home.png" alt="home", width="50">Trang chủ</a></li>
+              <li><input type="text" id="search-input" placeholder="Bạn muốn tìm"><img src="../images/search.png" alt="search", width="15" id="search-button"></li>
+              <li><a href="cart.html"><img src="../images/store.png" alt="store", width="50">Giỏ hàng</a></li>
+              <li><a href="orders.html"><img src="../images/order.png" alt="order", width="50">Đơn hàng</a></li>
+              <li><a href="account.html"><img src="../images/user.png" alt="user", width="50">Tài khoản</a></li>
+              <li><a href="./login.html"><img src="../images/logout.png" alt="logout", width="50">Đăng xuất</a></li>
+          </ul>
+      </div>
+  </nav>
+
+    <div class="payment-title">
+      <p>Danh sách chờ thanh toán</p>
+    </div>
+
+    <div class="payment-table">
+      <table>
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th>Tên sản phẩm</th>
+                <th>Giá sản phẩm</th>
+                <th>Số lượng</th>
+            </tr>
+        </thead>
+        <tbody id="order-items">
+            <!-- Các dòng sản phẩm sẽ được thêm vào đây -->
+        </tbody>
+    </table>
+    </div>
+
+    <div class="payment-action">
+        <div class="payment-input">
+            <label>Nhập địa chỉ giao hàng</label>
+            <input id="address" type="text" , value="", placeholder="Nhập địa chỉ giao hàng" />
+            <label>Nhập số điện thoại</label>
+            <input id="phone" type="text" , value="", placeholder="Nhập số điện thoại" />
+        </div>
+
+        <div class="payment-quanity">
+            <p id="num-products">Số lượng sản phẩm: 0</p>
+        </div>
+
+        <div class="payment-button">
+          <button id="submit-order">Thanh toán ngay</button>
+            <p id="total-price">Tổng giá trị đơn hàng: 0 đ</p>
+            <button>Hủy, về trang chủ</button>
+        </div>   
+    </div>
+
+    <script src="../js/payment.js"></script>
+    <script>
+        document.getElementById('search-button').addEventListener('click', function () {
+            const searchValue = document.getElementById('search-input').value.trim();
+            // Chuyển sang product-search.html và truyền giá trị tìm kiếm qua query string
+            window.location.href = `product-search.html?key=${encodeURIComponent(searchValue)}`;
+        });
+    </script>
+  </body>
+</html>
